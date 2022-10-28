@@ -23,7 +23,7 @@ while( $rows = mysqli_fetch_assoc($result) ) {
 }
 
 for($i=0;$i<sizeof($records);$i++){
-    var_dump(records[$i]);
+    echo records[$i];
 }
 
 ?>
