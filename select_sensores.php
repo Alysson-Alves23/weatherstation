@@ -14,16 +14,11 @@ if($conexao->error){
 	exit();
 }
 
-echo "Conexão com banco realizada com sucesso!"; 
-
-$Temperatura = $_GET["Temperatura"];
-$Pressão = $_GET["Pressão"]; 
-$Umidade = $_GET["Umidade"]; 
-$Altitude = $_GET["Altitude"]; 
 
 $query = "SELECT `Temperatura`,`Evapotranspiração`,`Data`,`Hora` FROM b0yzodwcokoju3jcuyho.dados WHERE data = '2022-10-05'";  
 $result = mysqli_query($conexao,$query);
 
+echo "Conexão com banco realizada com sucesso!"; 
 echo $result;
 
 ?>
