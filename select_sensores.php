@@ -21,9 +21,6 @@ $records = array();
 while( $rows = mysqli_fetch_assoc($result) ) {
 	$records[] = $rows;
 }
-echo "Conexão com banco realizada com sucesso!"; 
-
-for($i = 0; $i<sizeof($records);$i++)
-    echo $records[$i];
+ $result->fetch(\PDD::FETCH_ASSOC);
 
 ?>
