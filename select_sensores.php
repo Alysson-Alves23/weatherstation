@@ -19,6 +19,8 @@ $query = "SELECT `Temperatura`,`Evapotranspiração`,`Data`,`Hora` FROM b0yzodwc
 $result = mysqli_query($conexao,$query);
 
 echo "Conexão com banco realizada com sucesso!"; 
-echo $result;
+
+for($i = 0; $i<sizeof($result);$i++)
+    echo $result[$i];
 
 ?>
