@@ -18,5 +18,5 @@ if($conexao->error){
 $query = "SELECT `Temperatura`,`Evapotranspiração`,`Data`,`Hora` FROM b633vz1opiwq7syycoru.dados WHERE data = '2022-10-05'";  
 $result = mysqli_query($conexao,$query);
 $records = array();
-    echo mysqli_result($result, 2);
+    echo mysqli_fetch_fields( $result);
 ?>
