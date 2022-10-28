@@ -24,6 +24,6 @@ while( $rows = mysqli_fetch_assoc($result) ) {
 echo "Conexão com banco realizada com sucesso!"; 
 
 for($i = 0; $i<sizeof($records);$i++)
-    echo ""+$records[$i];
+    echo $records[$i];
 
 ?>
