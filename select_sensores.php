@@ -17,10 +17,13 @@ if($conexao->error){
 
 $query = "SELECT `Temperatura`,`Evapotranspiração`,`Data`,`Hora` FROM b0yzodwcokoju3jcuyho.dados WHERE data = '2022-10-05'";  
 $result = mysqli_query($conexao,$query);
-
+$records = array();
+while( $rows = mysqli_fetch_assoc($result) ) {
+	$records[] = $rows;
+}
 echo "Conexão com banco realizada com sucesso!"; 
 
-for($i = 0; $i<sizeof($result);$i++)
-    echo $result[$i];
+for($i = 0; $i<sizeof($records);$i++)
+    echo ""+$records[$i];
 
 ?>
